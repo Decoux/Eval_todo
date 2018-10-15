@@ -1,19 +1,37 @@
 <?php 
 include 'include/header.php';
+include 'selecte/projects.php';
+
+
 ?>
   <section>
-    <form class="d-flex flex-column col-12 col-md-4 mx-auto" action="post/add_projects.php" method="post">
-      <input type="text" name="name_project" placeholder="Nom du projet">
-      <textarea name="description_project" placeholder="Description du projet" cols="30" rows="10"></textarea>
-      <input type="date" name="deadline">
-      <select name="categorie" multiple>
-        <option value="JS">JS</option>
-        <option value="php">php</option>
-        <option value="html">html</option>
-        <option value="css">css</option>
-      </select>
-      <button type="submit" class="btn btn-primary">Enregistrer</button>
-    </form>
+    <div class="row">
+      
+        <?php foreach ($data as $value) { ?>
+          <div class="col-5 p-5 m-5 mx-auto bg-secondary">
+            <p class="text-white text-center"><?php echo $value['name_project']; ?></p><br />
+            <p class="text-white text-center"><?php echo $value['description_project']; ?></p><br />
+            <p class="text-white text-center"><?php echo $value['deadline']; ?></p><br />
+          </div>
+        <?php } ?>
+      
+      
+
+    </div>
+    <div class="row">
+      <form class="m-5 d-flex flex-column col-12 col-md-4 mx-auto" action="post/add_projects.php" method="post">
+        <input type="text" name="name_project" placeholder="Nom du projet">
+        <textarea name="description_project" placeholder="Description du projet" cols="30" rows="10"></textarea>
+        <input type="date" name="deadline">
+        <select name="categorie" multiple>
+          <option value="JS">JS</option>
+          <option value="php">php</option>
+          <option value="html">html</option>
+          <option value="css">css</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </form>
+    </div>
   </section>
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>
