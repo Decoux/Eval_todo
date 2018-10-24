@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 include '../connect_bdd.php';
 $req = $bdd->prepare('SELECT id, pass, name_user, firstname FROM users WHERE email = :email');
 $req->execute(array(
@@ -13,10 +13,11 @@ $isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
 if ($resultat) {
     if ($isPasswordCorrect) {
         session_start();
-        $_SESSION['id'] = $resultat['id'];
+        $_SESSION['id'] = ($resultat['id']);
         $_SESSION['name'] = $resultat['name_user'];
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['firstname'] = $resultat['firstname'];
+        $_SESSION['id_user'] = intval($_SESSION['id']);
 
         header('Location:../index.php');
 

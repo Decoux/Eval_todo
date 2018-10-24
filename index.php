@@ -1,22 +1,18 @@
 <?php 
 include 'include/header.php';
 include 'selecte/projects.php';
-
-
 ?>
   <section>
-    <div class="row">
-      
-        <?php foreach ($data as $value) { ?>
-          <div class="col-5 p-5 m-5 mx-auto bg-secondary">
-            <p class="text-white text-center"><?php echo $value['name_project']; ?></p><br />
-            <p class="text-white text-center"><?php echo $value['description_project']; ?></p><br />
-            <p class="text-white text-center"><?php echo $value['deadline']; ?></p><br />
-          </div>
+    <div class="row justify-content-center">
+        <?php foreach ($data as $key => $value) { ?>
+          <a class="col-2 py-5 m-5 bg-secondary" href="list_project.php?index=<?php echo $key+1; ?>">
+            <div>
+              <p class="text-white text-center"><?php echo $value['name_project']; ?></p><br />
+              <p class="text-white text-center"><?php echo $value['description_project']; ?></p><br />
+              <p class="text-white text-center"><?php echo $value['deadline']; ?></p><br />
+            </div>
+          </a>
         <?php } ?>
-      
-      
-
     </div>
     <div class="row">
       <form class="m-5 d-flex flex-column col-12 col-md-4 mx-auto" action="post/add_projects.php" method="post">
