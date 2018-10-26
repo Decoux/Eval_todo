@@ -16,7 +16,7 @@ $req = $bdd->prepare('INSERT INTO lists(name_list, deadline, projects_id) VALUES
 $req->execute(array(
   'name_list' => $name_list,
   'deadline' => $_POST['deadline'],
-  'projects_id' => $data_0[$_SESSION['index']-1]['id']
+  'projects_id' => $_SESSION['index_project']
   ));
   header('Location: ../index.php');
 ?>

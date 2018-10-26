@@ -3,6 +3,9 @@ include 'include/header.php';
 include 'selecte/projects.php';
 ?>
   <section>
+    <div class="container">
+            <h1 class="text-center">Projets</h1>
+
     <div class="row justify-content-center">
         <?php foreach ($data as $key => $value) { ?>
           <a class="col-2 py-5 m-5 bg-secondary" href="list_project.php?index=<?php echo $key+1; ?>">
@@ -27,6 +30,7 @@ include 'selecte/projects.php';
         </select>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
       </form>
+    </div>
     </div>
   </section>
 

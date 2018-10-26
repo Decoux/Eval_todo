@@ -13,7 +13,7 @@ $isPasswordCorrect = password_verify($_POST['pass'], $resultat['pass']);
 if ($resultat) {
     if ($isPasswordCorrect) {
         session_start();
-        $_SESSION['id'] = ($resultat['id']);
+        $_SESSION['id'] = $resultat['id'];
         $_SESSION['name'] = $resultat['name_user'];
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['firstname'] = $resultat['firstname'];

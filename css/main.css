@@ -108,6 +108,10 @@ textarea {
      background-color: gray;
    }
 
+   .closed{
+     text-decoration: line-through;
+   }
+
 
 
 
