@@ -1,8 +1,7 @@
 <?php 
 include 'include/header.php';
 include 'selecte/lists.php';
-$_SESSION['index_project'] = intval($_GET['index']+1);
-
+$_SESSION['index_project'] = intval($_GET['index']);
 ?>
 
 <section>
@@ -12,7 +11,7 @@ $_SESSION['index_project'] = intval($_GET['index']+1);
             <?php foreach ($data as $key => $value) { ?>
               <?php if ($data){ ?>
                 
-                <a class="col-2 py-5 m-5 bg-info" href="task_list_project.php?index= <?php echo $key+1; ?>">
+                <a class="col-2 py-5 m-5 bg-info" href="task_list_project.php?index=<?php echo $key+1; ?>">
                   <div>
                     <p class="text-white text-center"><?php echo $value['name_list']; ?></p><br />
                     <p class="text-white text-center"><?php echo $value['deadline']; ?></p>
