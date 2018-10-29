@@ -1,9 +1,13 @@
 <?php 
 session_start();
 include 'connect_bdd.php';
-$req = $bdd-> prepare('SELECT * FROM projects WHERE users_id = :users_id');
-$req->execute(array(
-  'users_id' => $_SESSION['id_user']
-  ));
-$data = $req->fetchAll();
+
+$req_project = $bdd-> prepare('SELECT * FROM projects WHERE users_id = :users_id');
+$req_project->execute(array(
+ 'users_id' => $_SESSION['id_user']
+ ));
+$data_project = $req_project->fetchAll();
+
+
+
 ?>

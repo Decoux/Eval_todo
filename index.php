@@ -1,22 +1,23 @@
-<?php 
+<?php
 include 'include/header.php';
 include 'selecte/projects.php';
 ?>
-  <section>
-    <div class="container">
-            <h1 class="text-center">Projets</h1>
-
+<section>
+  <div class="container">
+    <h1 class="text-center">Projets</h1>
     <div class="row justify-content-center">
-        <?php foreach ($data as $key => $value) { ?>
-          <a class="col-2 py-5 m-5 bg-secondary" href="list_project.php?index=<?php echo $key+1; ?>">
-            <div>
-              <p class="text-white text-center"><?php echo $value['name_project']; ?></p><br />
-              <p class="text-white text-center"><?php echo $value['description_project']; ?></p><br />
-              <p class="text-white text-center"><?php echo $value['deadline']; ?></p><br />
-            </div>
-          </a>
-        <?php } ?>
+      <!-- display projects -->
+      <?php foreach ($data_project as $key => $value) { ?>
+        <a class="col-2 py-5 m-5 bg-secondary" href="list_project.php?index=<?php echo $key+1; ?>">
+          <div>
+            <p class="text-white text-center"><?php echo $value['name_project']; ?></p><br />
+            <p class="text-white text-center"><?php echo $value['description_project']; ?></p><br />
+            <p class="text-white text-center"><?php echo $value['deadline']; ?></p><br />
+          </div>
+        </a>
+      <?php } ?>
     </div>
+    <!-- Form add projects-->
     <div class="row">
       <form class="m-5 d-flex flex-column col-12 col-md-4 mx-auto" action="post/add_projects.php" method="post">
         <input type="text" name="name_project" placeholder="Nom du projet">
@@ -31,17 +32,17 @@ include 'selecte/projects.php';
         <button type="submit" class="btn btn-primary">Enregistrer</button>
       </form>
     </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
   </script>

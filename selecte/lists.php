@@ -12,6 +12,6 @@ $req->execute(array(
     'users_id' => $_SESSION['id'],
     'projects_id' => $data_0[$_GET['index']-1]['id']
 ));
-$data = $req->fetchAll();
+$data_list = $req->fetchAll();
 
 ?>
