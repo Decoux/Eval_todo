@@ -14,7 +14,7 @@ $_SESSION['index_list']=$_GET['index'];
         <!-- If variable data_task is not null -> go -->
         <?php if ($data_task) { ?>
           
-          <div  class="col-2 py-5 m-5 bg-danger">
+          <div  class="col-2 py-5 m-5 bg-success">
             <p class="text-white text-center"><?php echo $value['name_task']; ?></p><br />
             <p class="text-white text-center"><?php echo $value['deadline']; ?></p>
             <form class="" action="update_task.php?index=<?php echo $key + 1; ?>" method="post">
@@ -26,7 +26,11 @@ $_SESSION['index_list']=$_GET['index'];
               </div>
             </form>
             <p class="mt-4 text-white text-center font-weight-bold"><?php echo $data_task[$key]['done']; ?></p>
-
+            <div class="row mt-4 justify-content-center">
+              <form action="delete/delete_task.php?index=<?php echo $key + 1; ?>" method="post">
+                <button type="submit" class="btn btn-danger">Supprimer</button>
+              </form>
+            </div>
           </div>
 
         <?php } ?>

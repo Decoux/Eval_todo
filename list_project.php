@@ -32,7 +32,7 @@ $_SESSION['index_project'] = intval($_GET['index']);
               <p class="text-white text-center"><?php echo $value['name_list']; ?></p><br />
               <p class="text-white text-center"><?php echo $value['deadline_list']; ?></p>
               <!--  foreach for display tasks-->
-              <?php foreach ($data as $key => $value) { ?>
+              <?php foreach ($data as $value) { ?>
                 <?php if (is_null($value['done'])){ ?>
                   <ul class="text-dark">
                     <li><?php echo $value['name_task']; ?></li>
@@ -43,6 +43,11 @@ $_SESSION['index_project'] = intval($_GET['index']);
                   </ul>
                 <?php } ?>
               <?php } ?>
+              <div class="row mt-4 justify-content-center">
+              <form action="delete/delete_list.php?index=<?php echo $key; ?>" method="post">
+                <button type="submit" class="btn btn-danger">Supprimer</button>
+              </form>
+            </div>
             </div>
           </a>
         <?php } ?>

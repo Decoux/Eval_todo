@@ -14,6 +14,11 @@ include 'selecte/projects.php';
             <p class="text-white text-center"><?php echo $value['description_project']; ?></p><br />
             <p class="text-white text-center"><?php echo $value['deadline']; ?></p><br />
           </div>
+          <div class="row mt-4 justify-content-center">
+              <form action="delete/delete_project.php?index=<?php echo $key; ?>" method="post">
+                <button type="submit" class="btn btn-danger">Supprimer</button>
+              </form>
+            </div>
         </a>
       <?php } ?>
     </div>
