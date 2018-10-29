@@ -8,7 +8,7 @@ include 'selecte/projects.php';
     <div class="row justify-content-center">
       <!-- display projects -->
       <?php foreach ($data_project as $key => $value) { ?>
-        <a class="col-2 py-5 m-5 bg-secondary" href="list_project.php?index=<?php echo $key+1; ?>">
+        <a class="col-md-2 col-12 py-5 m-5 bg-secondary" href="list_project.php?index=<?php echo $key+1; ?>">
           <div>
             <p class="text-white text-center"><?php echo $value['name_project']; ?></p><br />
             <p class="text-white text-center"><?php echo $value['description_project']; ?></p><br />

@@ -14,7 +14,7 @@ $_SESSION['index_list']=$_GET['index'];
         <!-- If variable data_task is not null -> go -->
         <?php if ($data_task) { ?>
           
-          <div  class="col-2 py-5 m-5 bg-success">
+          <div  class="col-md-2 col-12 py-5 m-5 bg-success">
             <p class="text-white text-center"><?php echo $value['name_task']; ?></p><br />
             <p class="text-white text-center"><?php echo $value['deadline']; ?></p>
             <form class="" action="update_task.php?index=<?php echo $key + 1; ?>" method="post">

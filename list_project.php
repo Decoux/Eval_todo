@@ -27,7 +27,7 @@ $_SESSION['index_project'] = intval($_GET['index']);
           ));
           $data = $req->fetchAll(); ?>
           <!-- link for view tasks info-->
-          <a class="col-2 py-5 m-5 bg-info" href="task_list_project.php?index=<?php echo $key+1; ?>">
+          <a class="col-md-2 col-12 py-5 m-5 bg-info" href="task_list_project.php?index=<?php echo $key+1; ?>">
             <div>
               <p class="text-white text-center"><?php echo $value['name_list']; ?></p><br />
               <p class="text-white text-center"><?php echo $value['deadline_list']; ?></p>
