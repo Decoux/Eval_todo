@@ -2,7 +2,7 @@
 include 'include/header.php';
 ?>
   <section>
-    <form class="col-4 mx-auto border border-dark p-5 d-flex flex-column" action="post/connexion_post.php" method="post">
+    <form class="mt-5 form-connect col-4 border border-dark p-5 d-flex flex-column" action="post/connexion_post.php" method="post">
         <p class="mx-auto">Formulaire de connexion</p>
         <input type="text" name="email" placeholder="Entrez votre email">
         <input type="password" name="pass" placeholder="Entrez votre mot de passe">
@@ -12,7 +12,7 @@ include 'include/header.php';
         </div>
         <button type="submit" class="col-6 mx-auto mt-5 btn btn-success">envoyer</button>
     </form>
-    <form class="col-4 mx-auto p-5 d-flex flex-column" action="add_user.php" method="post">
+    <form class="col-4 position-btn p-5 d-flex flex-column" action="add_user.php" method="post">
         <button type="submit" class="col-6 mx-auto btn btn-success">s'inscrire</button>
     </form>
   </section>
