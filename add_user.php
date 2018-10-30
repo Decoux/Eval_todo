@@ -1,32 +1,32 @@
 <?php 
   include 'include/header.php';
 ?>
-  <section>
-    <form class="col-4 form-connect border border-dark p-5 m-5 d-flex flex-column" action="post/add_user.php" method="post" enctype="multipart/form-data">
-      <p class="mx-auto">Formulaire d'inscription</p>
-      <input type="text" name="firstname" placeholder="Prenom">
-      <input type="text" name="name_user" placeholder="Nom">
-      <input type="password" name="pass" placeholder="Mot de passe">
-      <input type="password" name="pass_2" placeholder="Confirmation mot de passe">
-      <input type="text" name="email" placeholder="Adresse e-mail">
-      <span>Votre age : </span>
-      <select name="age" multiple>
-        <?php for ($i = 1; $i <= 99; $i++) { ?>
-            <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-        <?php } ?>
-      </select>
-      <button type="submit" class="col-6 mx-auto mt-5 btn btn-success">Envoyer</button>
-    </form>
-  </section>
+<section>
+  <form class="col-md-4 col-12 form-connect border border-dark mt-5 p-5 d-flex flex-column" action="post/add_user.php" method="post" enctype="multipart/form-data">
+    <p class="mx-auto">Formulaire d'inscription</p>
+    <input type="text" name="firstname" placeholder="Prenom">
+    <input type="text" name="name_user" placeholder="Nom">
+    <input type="password" name="pass" placeholder="Mot de passe">
+    <input type="password" name="pass_2" placeholder="Confirmation mot de passe">
+    <input type="text" name="email" placeholder="Adresse e-mail">
+    <span>Votre age : </span>
+    <select name="age" multiple>
+      <?php for ($i = 1; $i <= 99; $i++) { ?>
+          <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+      <?php } ?>
+    </select>
+    <button type="submit" class="col-md-6 mx-auto mt-5 btn btn-success">Envoyer</button>
+  </form>
+</section>
 
-  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+<script src="js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
     ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
   </script>

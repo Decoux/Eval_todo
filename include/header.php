@@ -22,30 +22,30 @@
 
 <body>
   
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <?php if (!isset ($_SESSION['email'])){ ?>
-      <li class="nav-item active">
-          <a class="nav-link" href="add_user.php">S'inscrire <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="connexion.php">Se connecter</a>
-      </li>
-         <?php } ?>
-         <?php if (isset($_SESSION['email'])) { ?>
-      <li class="nav-item">
-          <a class="nav-link" href="index.php">Projets</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" href="profil.php">Profil</a>
-      </li>
-      <?php } ?>
-      </ul>
-    </div>
-  </nav>
-</header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <?php if (!isset ($_SESSION['email'])){ ?>
+        <li class="nav-item active">
+            <a class="nav-link" href="add_user.php">S'inscrire <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="connexion.php">Se connecter</a>
+        </li>
+          <?php } ?>
+          <?php if (isset($_SESSION['email'])) { ?>
+        <li class="nav-item">
+            <a class="nav-link" href="index.php">Projets</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="profil.php">Profil</a>
+        </li>
+        <?php } ?>
+        </ul>
+      </div>
+    </nav>
+  </header>
