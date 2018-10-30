@@ -14,7 +14,7 @@ $_SESSION['index_list']=$_GET['index'];
         <!-- If variable data_task is not null -> go -->
         <?php if ($data_task) { ?>
           
-          <div  class="col-md-2 col-12 py-5 m-5 bg-success">
+          <div  class="col-md-2 col-12 py-5 m-5 border-card bg-success rounded-top">
             <p class="text-white text-center"><?php echo $value['name_task']; ?></p><br />
             <p class="text-white text-center"><?php echo $value['deadline']; ?></p>
             <form class="" action="update_task.php?index=<?php echo $key + 1; ?>" method="post">
@@ -41,8 +41,8 @@ $_SESSION['index_list']=$_GET['index'];
     <div class="row">
       <!-- form for add task-->
       <form class="m-5 d-flex flex-column col-12 col-md-4 mx-auto" action="post/add_task.php" method="post">
-        <input type="text" name="name_task" placeholder="Nom de la tache">
-        <input type="date" name="deadline">
+        <input type="text" name="name_task" placeholder="Nom de la tache" required>
+        <input type="date" name="deadline" required>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
       </form>
     </div>

@@ -9,7 +9,7 @@ $_SESSION['index_project'] = intval($_GET['index']);
 <section>
   <div class="container">
     <!-- Display info for projects-->
-    <div class="row mt-3 justify-content-center text-center border border-dark bg-secondary text-white">
+    <div class="font-weight-bold row mt-3 justify-content-center text-center border broder-dark bg-secondary text-white">
       <?php echo $data_project[$_SESSION['index_project'] - 1]['name_project']; ?><br />
       <?php echo $data_project[$_SESSION['index_project'] - 1]['description_project']; ?><br />
       <?php echo $data_project[$_SESSION['index_project'] - 1]['deadline']; ?>
@@ -27,18 +27,18 @@ $_SESSION['index_project'] = intval($_GET['index']);
           ));
           $data = $req->fetchAll(); ?>
           <!-- link for view tasks info-->
-          <a class="col-md-2 col-12 py-5 m-5 bg-info" href="task_list_project.php?index=<?php echo $key+1; ?>">
+          <a class="col-md-2 col-12 py-5 m-5 bg-info border-card rounded-top" href="task_list_project.php?index=<?php echo $key+1; ?>">
             <div>
               <p class="text-white text-center"><?php echo $value['name_list']; ?></p><br />
               <p class="text-white text-center"><?php echo $value['deadline_list']; ?></p>
               <!--  foreach for display tasks-->
               <?php foreach ($data as $value) { ?>
                 <?php if (is_null($value['done'])){ ?>
-                  <ul class="text-dark">
+                  <ul class="text-dark font-weight-bold">
                     <li><?php echo $value['name_task']; ?></li>
                   </ul>
                 <?php }else{ ?>
-                  <ul class="text-danger">
+                  <ul class="closed text-danger font-weight-bold">
                     <li><?php echo $value['name_task']; ?></li>
                   </ul>
                 <?php } ?>
@@ -56,8 +56,8 @@ $_SESSION['index_project'] = intval($_GET['index']);
 
     <div class="row">
       <form class="m-5 d-flex flex-column col-12 col-md-4 mx-auto" action="post/add_list.php" method="post">
-        <input type="text" name="name_list" placeholder="Nom de la liste">
-        <input type="date" name="deadline">
+        <input type="text" name="name_list" placeholder="Nom de la liste" required>
+        <input type="date" name="deadline" required>
         <button type="submit" class="btn btn-primary">Enregistrer</button>
       </form>
     </div>

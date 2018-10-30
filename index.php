@@ -8,7 +8,7 @@ include 'selecte/projects.php';
     <div class="row justify-content-center">
       <!-- display projects -->
       <?php foreach ($data_project as $key => $value) { ?>
-        <a class="col-md-2 col-12 py-5 m-5 bg-secondary" href="list_project.php?index=<?php echo $key+1; ?>">
+        <a class="col-md-2 col-12 py-5 m-5 bg-secondary border-card rounded-top" href="list_project.php?index=<?php echo $key+1; ?>">
           <div>
             <p class="text-white text-center"><?php echo $value['name_project']; ?></p><br />
             <p class="text-white text-center"><?php echo $value['description_project']; ?></p><br />
@@ -25,9 +25,9 @@ include 'selecte/projects.php';
     <!-- Form add projects-->
     <div class="row">
       <form class="m-5 d-flex flex-column col-12 col-md-4 mx-auto" action="post/add_projects.php" method="post">
-        <input type="text" name="name_project" placeholder="Nom du projet">
-        <textarea name="description_project" placeholder="Description du projet" cols="30" rows="10"></textarea>
-        <input type="date" name="deadline">
+        <input type="text" name="name_project" placeholder="Nom du projet" required>
+        <textarea name="description_project" placeholder="Description du projet" cols="30" rows="10" required></textarea>
+        <input type="date" name="deadline" required>
         <select name="categorie" multiple>
           <option value="JS">JS</option>
           <option value="php">php</option>

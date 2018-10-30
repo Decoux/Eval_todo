@@ -2,7 +2,7 @@
   include 'include/header.php';
 ?>
   <section>
-    <form class="col-4 mx-auto border border-dark p-5 m-5 d-flex flex-column" action="post/add_user.php" method="post" enctype="multipart/form-data">
+    <form class="col-4 form-connect border border-dark p-5 m-5 d-flex flex-column" action="post/add_user.php" method="post" enctype="multipart/form-data">
       <p class="mx-auto">Formulaire d'inscription</p>
       <input type="text" name="firstname" placeholder="Prenom">
       <input type="text" name="name_user" placeholder="Nom">
