@@ -37,7 +37,7 @@ if (isset($name_user) and isset($firstname) and isset($pass)) {
                     
                 ));
                     // echo "string";
-                header('../Location:index.php');
+                header('Location:../connexion.php');
                 } else {
                     echo "les mots de passe sont differents";
                 }
